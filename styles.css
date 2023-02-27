@@ -82,7 +82,7 @@ main{
     border: 3px solid yellowgreen;
 }
 .display {
-  grid-column: 1/span 4;s
+  grid-column: 1/span 4;
   height: 50px;
   font-size: 30px;
   background-color: #fff;
