@@ -101,6 +101,11 @@ button {
   margin: 5px;
   cursor: pointer;
 }
+button:hover{
+  box-shadow: 2px 3px black;
+  transform: scale(1.1);
+  transition-duration: 250ms;
+}
 
 .clear {
   background-color: #ff6666;
