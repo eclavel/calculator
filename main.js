@@ -16,6 +16,9 @@ buttons.forEach((button) => {
       button.innerHTML === "x" ||
       button.innerHTML === "/"
     ) {
+      if (displayNumber1 !== "" && displayNumber2 !== "" && operator !== "") {
+        operate(operator, Number(displayNumber1), Number(displayNumber2));
+      }
       operator = button.innerHTML;
     } else if (button.innerHTML === "C") {
       displayNumber1 = "";
@@ -49,7 +52,11 @@ function operate(operator, num1, num2) {
   } else if (operator === "x") {
     display.innerHTML = multiply(num1, num2);
   } else if (operator === "/") {
-    display.innerHTML = divide(num1, num2);
+    if (num2 === 0) {
+      display.innerHTML = `ERROR: num/${num2}`;
+    } else {
+      display.innerHTML = divide(num1, num2);
+    }
   }
   displayNumber1 = display.innerHTML;
   displayNumber2 = "";

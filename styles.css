@@ -64,29 +64,24 @@ h6 {
 
 /*---------- CSS RESET FINISH ------------------*/
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 3px solid red;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header{
-    border: 3px solid yellowgreen;
-}
-
-main{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    border: 3px solid yellowgreen;
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid black;
 }
 .display {
-  grid-column: 1/span 4;
+  grid-column: 1 / span 4;
   height: 50px;
   font-size: 30px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   margin-bottom: 10px;
   padding: 10px;
   text-align: right;
@@ -101,7 +96,7 @@ button {
   margin: 5px;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   box-shadow: 2px 3px black;
   transform: scale(1.1);
   transition-duration: 250ms;
@@ -115,8 +110,4 @@ button:hover{
 .operator {
   background-color: #66b3ff;
   color: #fff;
-}
-
-footer{
-    border: 3px solid yellowgreen;
 }
