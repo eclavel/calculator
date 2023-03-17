@@ -9,25 +9,45 @@ var displayNumber2 = "";
 var operator = "";
 
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("mouseup", () => {
     if (
       button.innerHTML === "+" ||
       button.innerHTML === "-" ||
       button.innerHTML === "x" ||
       button.innerHTML === "/"
     ) {
+      button.style.backgroundColor = "#66b3ff";
+    } else if (button.innerHTML === "C") {
+      button.style.backgroundColor = "#ff6666";
+    } else if (button.innerHTML === "=") {
+      button.style.backgroundColor = "aquamarine";
+    } else if (display.innerHTML.length < 12) {
+      button.style.backgroundColor = "#fff";
+    }
+  });
+  button.addEventListener("mousedown", () => {
+    if (
+      button.innerHTML === "+" ||
+      button.innerHTML === "-" ||
+      button.innerHTML === "x" ||
+      button.innerHTML === "/"
+    ) {
+      button.style.backgroundColor = "red";
       if (displayNumber1 !== "" && displayNumber2 !== "" && operator !== "") {
         operate(operator, Number(displayNumber1), Number(displayNumber2));
       }
       operator = button.innerHTML;
     } else if (button.innerHTML === "C") {
+      button.style.backgroundColor = "green";
       displayNumber1 = "";
       displayNumber2 = "";
       operator = "";
       display.innerHTML = "0";
     } else if (button.innerHTML === "=") {
+      button.style.backgroundColor = "red";
       operate(operator, Number(displayNumber1), Number(displayNumber2));
     } else if (display.innerHTML.length < 12) {
+      button.style.backgroundColor = "red";
       if (displayNumber1 === "" || operator === "") {
         displayNumber1 += button.innerHTML;
         display.innerHTML = displayNumber1;

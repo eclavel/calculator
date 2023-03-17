@@ -104,10 +104,12 @@ button:hover {
 
 .clear {
   background-color: #ff6666;
-  color: #fff;
 }
 
 .operator {
   background-color: #66b3ff;
-  color: #fff;
+}
+
+#equal {
+  background-color: aquamarine;
 }
