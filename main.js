@@ -4,6 +4,22 @@ let displayNumber1 = '';
 let displayNumber2 = '';
 let operator = '';
 
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+function divide(num1, num2) {
+  return num1 / num2;
+}
+
 buttons.forEach((button) => {
   button.addEventListener('mouseup', () => {
     if (
@@ -77,20 +93,4 @@ function operate(operator, num1, num2) {
   displayNumber1 = display.innerHTML;
   displayNumber2 = '';
   operator = '';
-}
-
-function add(num1, num2) {
-  return num1 + num2;
-}
-
-function subtract(num1, num2) {
-  return num1 - num2;
-}
-
-function multiply(num1, num2) {
-  return num1 * num2;
-}
-
-function divide(num1, num2) {
-  return num1 / num2;
 }
